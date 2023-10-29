@@ -1,0 +1,37 @@
+actions:
+- '.github/**/*'
+
+test:
+- src/**/*.spec.js
+- src/**/*.spec.ts
+- src/**/*.test.js
+- src/**/*.test.ts
+- src/**/__tests__/**/*
+- __tests__/**/*
+- tests/**/*
+
+documetation:
+- '.docs/**/*'
+- 'docs/**/*'
+- 'doc/**/*'
+- 'documentation/**/*'
+
+⚙️ configuration:
+- '.idea/**/*'
+- '.github/**/*'
+- '.vscode/**/*'
+- '.husky/**/*'
+- '.lintstagedrc'
+- '.prettierrc'
+- '.eslintrc'
+- '.editorconfig'
+- '.gitignore'
+- '.gitattributes'
+- '.npmignore'
+- '.npmrc'
+- '*.config.js'
+- '*.config.ts'
+
+📦 dependencies:
+- 'package.json'
+- 'package-lock.json'
