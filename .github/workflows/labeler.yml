@@ -6,7 +6,9 @@
 # https://github.com/actions/labeler
 
 name: Labeler
-on: [pull_request_target]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited, labeled, unlabeled]
 
 jobs:
   label:
@@ -19,7 +21,7 @@ jobs:
     steps:
     - uses: actions/labeler@v4
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
         dot: true
-        configuration-path: .github/config/label.yml
         sync-labels: yes
+        configuration-path: .github/config/label.yml
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
