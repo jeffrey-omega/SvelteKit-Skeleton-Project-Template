@@ -1,6 +1,6 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:recommended"],
+	"extends": ["config:recommended", ":rebaseStalePrs"],
 	"timezone": "Europe/Zurich",
 	"schedule": ["after 18:30 on Friday", "before 08:30 on Monday", "every weekend"],
 	"lockFileMaintenance": {
@@ -11,8 +11,24 @@
 		{
 			"matchUpdateTypes": ["minor", "patch"],
 			"matchCurrentVersion": "!/^0/",
-			"addLabels": ["📦 dependencies"],
+			"addLabels": ["Dependencies 📦"],
 			"automerge": true
+		},
+		{
+			"matchPackageNames": ["actions/labeler"],
+			"enabled": false
+		},
+		{
+			"matchPackagePatterns": ["@threlte"],
+			"groupName": "@threlte",
+			"automerge": true,
+			"automergeType": "branch"
+		},
+		{
+			"matchPackagePatterns": ["@theatre"],
+			"groupName": "@theatre",
+			"automerge": true,
+			"automergeType": "branch"
 		}
 	]
 }
