@@ -1,4 +1,7 @@
-![screenshot](./static/screenshot.png)
+# SvelteKit Skeleton Project Template
+
+![screenshot](./static/screenshot-dark.png#gh-dark-mode-only)
+![screenshot](./static/screenshot-light.png#gh-light-mode-only)
 
 # create-svelte
 
